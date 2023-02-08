@@ -1,0 +1,18 @@
+[submodule "learn-tex"]
+	path = learn-tex
+	url = git@github.com:abpwrs/learn-tex.git
+[submodule "learn-sympy"]
+	path = learn-sympy
+	url = git@github.com:abpwrs/learn-sympy.git
+[submodule "learn-rabbitmq"]
+	path = learn-rabbitmq
+	url = git@github.com:abpwrs/learn-rabbitmq.git
+[submodule "learn-python-logging"]
+	path = learn-python-logging
+	url = git@github.com:abpwrs/learn-python-logging.git
+[submodule "learn-gto"]
+	path = learn-gto
+	url = git@github.com:abpwrs/learn-gto.git
+[submodule "learn-go"]
+	path = learn-go
+	url = git@github.com:abpwrs/learn-go.git
