@@ -16,3 +16,6 @@
 [submodule "learn-go"]
 	path = learn-go
 	url = git@github.com:abpwrs/learn-go.git
+[submodule "learn-rust"]
+	path = learn-rust
+	url = git@github.com:abpwrs/learn-rust.git
