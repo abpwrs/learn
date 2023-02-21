@@ -19,3 +19,6 @@
 [submodule "learn-rust"]
 	path = learn-rust
 	url = git@github.com:abpwrs/learn-rust.git
+[submodule "learn-dvc-monorepo"]
+	path = learn-dvc-monorepo
+	url = git@github.com:abpwrs/learn-dvc-monorepo.git
