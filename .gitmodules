@@ -22,3 +22,15 @@
 [submodule "learn-dvc-monorepo"]
 	path = learn-dvc-monorepo
 	url = git@github.com:abpwrs/learn-dvc-monorepo.git
+[submodule "learn-k8s"]
+	path = learn-k8s
+	url = git@github.com:abpwrs/learn-k8s.git
+[submodule "learn-kubeflow"]
+	path = learn-kubeflow
+	url = git@github.com:abpwrs/learn-kubeflow.git
+[submodule "learn-knative"]
+	path = learn-knative
+	url = git@github.com:abpwrs/learn-knative.git
+[submodule "learn-kafka"]
+	path = learn-kafka
+	url = git@github.com:abpwrs/learn-kafka.git
