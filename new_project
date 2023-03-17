@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# Author: "alex"
+# Date: 20230317
+
+set -e
+
+# args:
+# 1 project name
+
+if [[ -z $1 ]]; then
+    echo "Must specify project name as the first argument."
+    exit 1;
+fi
+
+# script:
+dir_name="learn-$1"
+dir_location="/tmp/$dir_name"
+echo "creating: $dir_name"
+
+
+mkdir $dir_location
+pushd $dir_location
+
+echo "# $dir_name" >> README.md
+git init
+git add .
+git commit -m "init: $dir_name"
+gh repo create --public abpwrs/$dir_name
+git remote add origin git@github.com:abpwrs/$dir_name.git
+git push -u origin main
+popd
+
+git submodule add git@github.com:abpwrs/$dir_name.git
+git submodule update --init --recursive
