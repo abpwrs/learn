@@ -34,3 +34,6 @@
 [submodule "learn-kafka"]
 	path = learn-kafka
 	url = git@github.com:abpwrs/learn-kafka.git
+[submodule "learn-ray"]
+	path = learn-ray
+	url = git@github.com:abpwrs/learn-ray.git
