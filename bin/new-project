@@ -4,6 +4,13 @@
 
 set -e
 
+
+# Get the directory of the current script
+SCRIPT_DIR="$(dirname "$0")"
+
+# move up to the project root
+pushd $SCRIPT_DIR/..
+
 # args:
 # 1 project name
 
@@ -16,7 +23,6 @@ fi
 dir_name="learn-$1"
 dir_location="/tmp/$dir_name"
 echo "creating: $dir_name"
-
 
 mkdir $dir_location
 pushd $dir_location
@@ -32,3 +38,6 @@ popd
 
 git submodule add git@github.com:abpwrs/$dir_name.git
 git submodule update --init --recursive
+
+popd
+

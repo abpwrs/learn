@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# Author: "alex"
+# Date: 20240116
+
+set -e
+
+# Get the directory of the current script
+SCRIPT_DIR="$(dirname "$0")"
+
+# move up to the project root
+pushd $SCRIPT_DIR/..
+
+# for each submodule directory
+for submodule in $(git submodule --quiet foreach 'echo $path'); do
+    # navigate to the submodule directory
+    pushd $submodule
+    # checkout the latest version on the main branch
+    git checkout main
+    # pull the latest changes
+    git pull    
+    # navigate back to the project root
+    popd
+    # add the submodule updates to the main git project
+    git add $submodule
+done
+
+# commit the changes
+timestamp=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
+commit_message="Sync to submodule's main branch - $timestamp"
+git commit -m "$commit_message"
+# navigate back to the original directory
+popd
